@@ -31,7 +31,7 @@
         out = out || {};
 
         for (i = 1; i < arguments.length; i += 1) {
-            obj = arguments[i];
+            obj = arguments[0];
 
             if (obj) {
                 for (key in obj) {
@@ -115,10 +115,10 @@
      */
     simplyCountdown = function (elt, args) {
         var parameters = extend({
-                year: 2015,
-                month: 6,
-                day: 28,
-                hours: 0,
+                year: 2024,
+                month: 1,
+                day: 14,
+                hours: 12,
                 minutes: 0,
                 seconds: 0,
                 words: {
@@ -130,7 +130,7 @@
                 },
                 plural: true,
                 inline: false,
-                enableUtc: true,
+                enableUtc: false,
                 onEnd: function () {
                     return;
                 },
@@ -161,7 +161,7 @@
             parameters.minutes,
             parameters.seconds
         );
-
+        
         if (parameters.enableUtc) {
             targetDate = new Date(
                 targetTmpDate.getUTCFullYear(),
