@@ -254,12 +254,13 @@ figure {
   -moz-box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
 }
-.fh5co-nav ul li.active > a {
+
+.fh5co-nav ul li.active>a {
   color: #fff;
 }
 
-.hover-overlay:hover{
-  color: palevioletred !important;  
+.hover-overlay:hover {
+  color: palevioletred !important;
 }
 
 #fh5co-counter,
@@ -614,7 +615,8 @@ figure {
     top: 31px;
   }
 }
-.timeline > li > .timeline-badge {
+
+.timeline>li>.timeline-badge {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -1237,7 +1239,6 @@ form label {
 
   .couple-half .groom,
   .couple-half .bride {
-    width: 100%;
     height: 140px;
   }
 
@@ -1260,12 +1261,14 @@ form label {
 }
 
 .couple-half .desc-groom {
-  padding-right: 10em;
+  padding-top: 1em;
+  padding-right: 5em;
   text-align: right;
 }
 
 .couple-half .desc-bride {
-  padding-left: 10em;
+  padding-top: 1em;
+  padding-left: 5em;
   text-align: left;
 }
 
@@ -2130,7 +2133,7 @@ form label {
 
 #fh5co-header {
   background-image: url(images/img_bg_2.jpg);
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -2142,20 +2145,20 @@ form label {
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   #fh5co-header {
-    background-size: cover; 
+    background-size: cover;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   #fh5co-header {
-   background-size: 115%;
+    background-size: 115%;
   }
 }
 
 @media (min-width: 992px) {
   .fh5co-cover {
     background-size: 100%;
-  } 
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

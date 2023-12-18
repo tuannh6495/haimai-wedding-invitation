@@ -964,8 +964,7 @@ form {
     margin: 0 4px;
     @include border-radius(50%);
     position: relative;
-
-    animation: pulse 1s ease infinite, 
+    animation: pulse 1s ease infinite
 }
 
 @keyframes pulse {
