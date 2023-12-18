@@ -219,7 +219,11 @@ h1, h2, h3, h4, h5, h6, figure {
   box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
 }
 .fh5co-nav ul li.active > a {
-  color: #fff !important;
+  color: #fff;
+}
+
+.hover-overlay:hover{
+  color: palevioletred !important;  
 }
 
 #fh5co-counter,
@@ -530,6 +534,7 @@ h1, h2, h3, h4, h5, h6, figure {
     top: 31px;
   }
 }
+
 .timeline > li > .timeline-badge {
   background-size: cover;
   background-position: top center;
@@ -1141,6 +1146,11 @@ form label {
   .feature-center {
     margin-bottom: 50px;
   }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  fh5co-header{margin-top: 20%;}
 }
 .feature-center .icon {
   width: 90px;
@@ -1839,6 +1849,36 @@ form label {
 
 .js .animate-box {
   opacity: 0;
+}
+
+#fh5co-header {
+  background-image: url(images/img_bg_2.jpg);
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+@media (max-width: 575.98px) {
+  #fh5co-header {
+    background-size: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #fh5co-header {
+    background-size: cover; 
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #fh5co-header {
+   background-size: 115%;
+  }
+}
+
+@media (min-width: 992px) {
+  .fh5co-cover {
+    background-size: 100%;
+  } 
 }
 
 /*# sourceMappingURL=style.css.map */
