@@ -2,18 +2,19 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Huy Tuấn - Thu Ngân</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-		<meta name="keywords"
-			content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-		<meta name="author" content="FREEHTML5.CO" />
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 
-		<!-- 
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Huy Tuấn - Thu Ngân</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
+
+	<!-- 
 	//////////////////////////////////////////////////////
 
 	FREE HTML5 TEMPLATE 
@@ -27,82 +28,109 @@
 	//////////////////////////////////////////////////////
 	 -->
 
-		<!-- Facebook and Twitter integration -->
-		<meta property="og:title" content />
-		<meta property="og:image" content />
-		<meta property="og:url" content />
-		<meta property="og:site_name" content />
-		<meta property="og:description" content />
-		<meta name="twitter:title" content />
-		<meta name="twitter:image" content />
-		<meta name="twitter:url" content />
-		<meta name="twitter:card" content />
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content />
+	<meta property="og:image" content />
+	<meta property="og:url" content />
+	<meta property="og:site_name" content />
+	<meta property="og:description" content />
+	<meta name="twitter:title" content />
+	<meta name="twitter:image" content />
+	<meta name="twitter:url" content />
+	<meta name="twitter:card" content />
 
-		<link
-			href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700'
-			rel='stylesheet' type='text/css'>
-		<link href="https://fonts.googleapis.com/css?family=Sacramento"
-			rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
+		type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
 
-		<!-- Animate.css -->
-		<link rel="stylesheet" href="css/animate.css">
-		<!-- Icomoon Icon Fonts-->
-		<link rel="stylesheet" href="css/icomoon.css">
-		<!-- Bootstrap  -->
-		<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
 
-		<!-- Magnific Popup -->
-		<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
 
-		<!-- Owl Carousel  -->
-		<link rel="stylesheet" href="css/owl.carousel.min.css">
-		<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-		<!-- Theme style  -->
-		<link rel="stylesheet" href="css/style.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
 
-		<!-- Modernizr JS -->
-		<script src="js/modernizr-2.6.2.min.js"></script>
-		<!-- FOR IE9 below -->
-		<!--[if lt IE 9]>
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<style>
+		body div {
+			font-size: 0.8rem;
+			overflow: hidden;
+			/* Ẩn thanh trượt dọc */
+		}
 
-	</head>
-	<body>
+		@media (min-width: 768px) {
+			#fh5co-header {
+				height: 100vmax;
+				display: flex;
+				align-items: center;
+				text-align: center;
+			}
 
-		<div class="fh5co-loader"></div>
+			#fh5co-header .overlay {
+				position: absolute;
+				text-align: center;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.5);
+			}
+		}
+	</style>
 
-		<div id="page">
-			<nav class="fh5co-nav" role="navigation">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-2">
-							<div id="fh5co-logo"><a href="index.html">Wedding<strong>.</strong></a></div>
-						</div>
-						<div class="col-xs-10 text-right menu-1">
-							<ul>
-								<li class="active"><a href="index.html">Home</a></li>
-								<li class="active"><a href="#" onclick="scrollToTarget('fh5co-couple')">Lời mời</a></li>
-								<li class="active"><a href="#" onclick="scrollToTarget('fh5co-event')">Thời gian & địa điểm</a></li>
-								<li class="active"><a href="#" onclick="scrollToTarget('fh5co-gallery')">Ảnh</a></li>
-								<li class="active"><a href="#" onclick="scrollToTarget()">Lời chúc</a></li>
-							</ul>
-						</div>
+</head>
+
+<body>
+
+	<div class="fh5co-loader"></div>
+
+	<div id="page">
+		<nav class="fh5co-nav" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="index.html">Wedding<strong>.</strong></a></div>
 					</div>
-
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li class="active"><a href="#" onclick="scrollToTarget('fh5co-couple')">Lời mời</a></li>
+							<li class="active"><a href="#" onclick="scrollToTarget('fh5co-event')">Thời gian & địa
+									điểm</a></li>
+							<li class="active"><a href="#" onclick="scrollToTarget('fh5co-gallery')">Ảnh</a></li>
+							<li class="active"><a href="#" onclick="scrollToTarget()">Lời chúc</a></li>
+						</ul>
+					</div>
 				</div>
-			</nav>
 
-			<header id="fh5co-header" class="fh5co-cover" role="banner"
-				style="background-image:url(images/img_bg_2.jpg);"
-				data-stellar-background-ratio="1">
+			</div>
+		</nav>
+
+		<header id="fh5co-header" class="fh5co-cover container col-12" role="banner"
+			style="background-image:url(images/img_bg_2.jpg);">
+			<div>
 				<div class="overlay"></div>
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center">
 							<div class="display-t">
-								<div class="display-tc animate-box" data-animate-effect="fadeIn">
+								<div class="display-tc animate-box" data-animate-effect="fadeIn"
+									style="margin: 0 auto;">
 									<h1 style="font-size:3vw">Huy Tuan &amp; Thu Ngan</h1>
 									<h2>We Are Getting Married</h2>
 									<div class="simply-countdown simply-countdown-one"></div>
@@ -112,82 +140,81 @@
 						</div>
 					</div>
 				</div>
-			</header>
+			</div>
+		</header>
 
-			<!-- Invitation -->
-			<div id="fh5co-couple">
-				<div class="container">
-					<div class="row">
-						<div
-							class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-							<h2>Hello!</h2>
-							<h3>January 14th, 2024 Bac Ninh</h3>
-							<p>We invited you to celebrate our wedding</p>
+
+		<!-- Invitation -->
+		<div id="fh5co-couple">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+						<h2>Hello!</h2>
+						<h3>January 14th, 2024 Bac Ninh</h3>
+						<p>We invited you to celebrate our wedding</p>
+					</div>
+				</div>
+				<div class="couple-wrap animate-box img-responsive">
+					<div class="couple-half d-flex">
+						<div class="groom">
+							<img src="images/groom.jpg" alt="groom" class="img-responsive">
+						</div>
+						<div class="desc-groom">
+							<h3>Huy Tuan</h3>
+							<p>If water were kisses, I’d send you the sea
+								If leaves were hugs, I’d send you a tree
+								If night was love, I’d send you the stars
+								But I can’t send you my heart because that where you are.</p>
 						</div>
 					</div>
-					<div class="couple-wrap animate-box">
-						<div class="couple-half">
-							<div class="groom">
-								<img src="images/groom.jpg" alt="groom" class="img-responsive">
-							</div>
-							<div class="desc-groom">
-								<h3>Huy Tuan</h3>
-								<p>If water were kisses, I’d send you the sea
-									If leaves were hugs, I’d send you a tree
-									If night was love, I’d send you the stars
-									But I can’t send you my heart because that where you are.</p>
-							</div>
+					<p class="heart text-center"><i class="icon-heart2"></i></p>
+					<div class="couple-half">
+						<div class="bride">
+							<img src="images/bride.jpg" alt="groom" class="img-responsive">
 						</div>
-						<p class="heart text-center"><i class="icon-heart2"></i></p>
-						<div class="couple-half">
-							<div class="bride">
-								<img src="images/bride.jpg" alt="groom" class="img-responsive">
-							</div>
-							<div class="desc-bride">
-								<h3>Thu Ngan</h3>
-								<p>Bé Ngân hay dỗi khóc nhè đặc biệt là rất cú đêm</p>
-							</div>
+						<div class="desc-bride">
+							<h3>Thu Ngan</h3>
+							<p>Bé Ngân hay dỗi khóc nhè đặc biệt là rất cú đêm</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- end -->
+		</div>
+		<!-- end -->
 
-			<!-- Wedding Events and Location -->
-			<div id="fh5co-event" class="fh5co-bg"
-				style="background-image:url(images/img_bg_3.jpg);">
-				<div class="overlay"></div>
-				<div class="container">
-					<div class="row">
-						<div
-							class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-							<span>Our Special Events</span>
-							<h2>Wedding Events</h2>
-						</div>
+		<!-- Wedding Events and Location -->
+		<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/img_bg_3.jpg);">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+						<span>Our Special Events</span>
+						<h2>Wedding Events</h2>
 					</div>
-					<div class="row">
-						<div class="display-t">
-							<div class="display-tc">
-								<div class="col-md-10 col-md-offset-1">
-									<div class="col-md-6 col-sm-6 text-center">
-										<div class="event-wrap animate-box">
-											<h3>Main Ceremony</h3>
-											<div class="event-col">
-												<i class="icon-clock"></i>
-												<span>4:00 PM</span>
-												<span>6:00 PM</span>
-											</div>
-											<div class="event-col">
-												<i class="icon-calendar"></i>
-												<span>Monday 28</span>
-												<span>November, 2016</span>
-											</div>
-											<p>Huy Tuấn - Thu Ngân</p>
+				</div>
+				<div class="row">
+					<div class="display-t">
+						<div class="display-tc">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="col-md-6 col-sm-6 text-center">
+									<div class="event-wrap animate-box">
+										<h3>Main Ceremony</h3>
+										<div class="event-col">
+											<i class="icon-clock"></i>
+											<span>4:00 PM</span>
+											<span>6:00 PM</span>
 										</div>
+										<div class="event-col">
+											<i class="icon-calendar"></i>
+											<span>Monday 28</span>
+											<span>November, 2016</span>
+										</div>
+										<p>Huy Tuấn - Thu Ngân</p>
 									</div>
-									<div class="col-md-6 col-sm-6 text-center">
-										<div class="event-wrap animate-box">
-											<!-- <h3>Wedding Party</h3>
+								</div>
+								<div class="col-md-6 col-sm-6 text-center">
+									<div class="event-wrap animate-box">
+										<!-- <h3>Wedding Party</h3>
 											<div class="event-col">
 												<i class="icon-clock"></i>
 												<span>7:00 PM</span>
@@ -199,9 +226,8 @@
 												<span>November, 2016</span>
 											</div>
 											<p>Thu Ngân</p> -->
-											<div style="color: black;"> 
-												QR GMap in here
-											</div>
+										<div style="color: black;">
+											QR GMap in here
 										</div>
 									</div>
 								</div>
@@ -210,174 +236,173 @@
 					</div>
 				</div>
 			</div>
-			<!-- end -->
+		</div>
+		<!-- end -->
 
-			<!-- Gallery -->
-			<div id="fh5co-gallery">
-				<div class="container">
-					<div class="row">
-						<div
-							class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-							<span>Our Memories</span>
-							<h2>Wedding Gallery</h2>
-							<p>Ảnh cưới của hai đứa đây nhé</p>
-						</div>
+		<!-- Gallery -->
+		<div id="fh5co-gallery">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+						<span>Our Memories</span>
+						<h2>Wedding Gallery</h2>
+						<p>Ảnh cưới của hai đứa đây nhé</p>
 					</div>
-					<div class="row row-bottom-padded-md">
-						<div class="col-md-12">
-							<ul id="fh5co-gallery-list">
+				</div>
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-12">
+						<ul id="fh5co-gallery-list">
 
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
-									style="background-image: url(images/gallery-1.jpg); ">
-									<a href="images/gallery-1.jpg">
-										<div class="case-studies-summary">
-											<span>14 Photos</span>
-											<h2>Two Glas of Juice</h2>
-										</div>
-									</a>
-								</li>
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
-									style="background-image: url(images/gallery-2.jpg); ">
-									<a href="#" class="color-2">
-										<div class="case-studies-summary">
-											<span>30 Photos</span>
-											<h2>Timer starts now!</h2>
-										</div>
-									</a>
-								</li>
+							<li class="one-third animate-box" data-animate-effect="fadeIn"
+								style="background-image: url(images/gallery-1.jpg); ">
+								<a href="images/gallery-1.jpg">
+									<div class="case-studies-summary">
+										<span>14 Photos</span>
+										<h2>Two Glas of Juice</h2>
+									</div>
+								</a>
+							</li>
+							<li class="one-third animate-box" data-animate-effect="fadeIn"
+								style="background-image: url(images/gallery-2.jpg); ">
+								<a href="#" class="color-2">
+									<div class="case-studies-summary">
+										<span>30 Photos</span>
+										<h2>Timer starts now!</h2>
+									</div>
+								</a>
+							</li>
 
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
-									style="background-image: url(images/gallery-3.jpg); ">
-									<a href="#" class="color-3">
-										<div class="case-studies-summary">
-											<span>90 Photos</span>
-											<h2>Beautiful sunset</h2>
-										</div>
-									</a>
-								</li>
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
-									style="background-image: url(images/gallery-4.jpg); ">
-									<a href="#" class="color-4">
-										<div class="case-studies-summary">
-											<span>12 Photos</span>
-											<h2>Company's Conference Room</h2>
-										</div>
-									</a>
-								</li>
+							<li class="one-third animate-box" data-animate-effect="fadeIn"
+								style="background-image: url(images/gallery-3.jpg); ">
+								<a href="#" class="color-3">
+									<div class="case-studies-summary">
+										<span>90 Photos</span>
+										<h2>Beautiful sunset</h2>
+									</div>
+								</a>
+							</li>
+							<li class="one-third animate-box" data-animate-effect="fadeIn"
+								style="background-image: url(images/gallery-4.jpg); ">
+								<a href="#" class="color-4">
+									<div class="case-studies-summary">
+										<span>12 Photos</span>
+										<h2>Company's Conference Room</h2>
+									</div>
+								</a>
+							</li>
 
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
-									style="background-image: url(images/gallery-5.jpg); ">
-									<a href="#" class="color-3">
-										<div class="case-studies-summary">
-											<span>50 Photos</span>
-											<h2>Useful baskets</h2>
-										</div>
-									</a>
-								</li>
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
-									style="background-image: url(images/gallery-6.jpg); ">
-									<a href="#" class="color-4">
-										<div class="case-studies-summary">
-											<span>45 Photos</span>
-											<h2>Skater man in the road</h2>
-										</div>
-									</a>
-								</li>
+							<li class="one-third animate-box" data-animate-effect="fadeIn"
+								style="background-image: url(images/gallery-5.jpg); ">
+								<a href="#" class="color-3">
+									<div class="case-studies-summary">
+										<span>50 Photos</span>
+										<h2>Useful baskets</h2>
+									</div>
+								</a>
+							</li>
+							<li class="one-third animate-box" data-animate-effect="fadeIn"
+								style="background-image: url(images/gallery-6.jpg); ">
+								<a href="#" class="color-4">
+									<div class="case-studies-summary">
+										<span>45 Photos</span>
+										<h2>Skater man in the road</h2>
+									</div>
+								</a>
+							</li>
 
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
-									style="background-image: url(images/gallery-7.jpg); ">
-									<a href="#" class="color-4">
-										<div class="case-studies-summary">
-											<span>35 Photos</span>
-											<h2>Two Glas of Juice</h2>
-										</div>
-									</a>
-								</li>
+							<li class="one-third animate-box" data-animate-effect="fadeIn"
+								style="background-image: url(images/gallery-7.jpg); ">
+								<a href="#" class="color-4">
+									<div class="case-studies-summary">
+										<span>35 Photos</span>
+										<h2>Two Glas of Juice</h2>
+									</div>
+								</a>
+							</li>
 
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
-									style="background-image: url(images/gallery-8.jpg); ">
-									<a href="#" class="color-5">
-										<div class="case-studies-summary">
-											<span>90 Photos</span>
-											<h2>Timer starts now!</h2>
-										</div>
-									</a>
-								</li>
-								<li class="one-third animate-box" data-animate-effect="fadeIn"
-									style="background-image: url(images/gallery-9.jpg); ">
-									<a href="#" class="color-6">
-										<div class="case-studies-summary">
-											<span>56 Photos</span>
-											<h2>Beautiful sunset</h2>
-										</div>
-									</a>
-								</li>
-							</ul>
-						</div>
+							<li class="one-third animate-box" data-animate-effect="fadeIn"
+								style="background-image: url(images/gallery-8.jpg); ">
+								<a href="#" class="color-5">
+									<div class="case-studies-summary">
+										<span>90 Photos</span>
+										<h2>Timer starts now!</h2>
+									</div>
+								</a>
+							</li>
+							<li class="one-third animate-box" data-animate-effect="fadeIn"
+								style="background-image: url(images/gallery-9.jpg); ">
+								<a href="#" class="color-6">
+									<div class="case-studies-summary">
+										<span>56 Photos</span>
+										<h2>Beautiful sunset</h2>
+									</div>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
-			<!-- end -->
+		</div>
+		<!-- end -->
 
-			<div id="fh5co-counter" class="fh5co-bg fh5co-counter"
-				style="background-image:url(images/img_bg_5.jpg);">
-				<div class="overlay"></div>
-				<div class="container">
-					<div class="row">
-						<div class="display-t">
-							<div class="display-tc">
-								<div class="col-md-3 col-sm-6 animate-box">
-									<div class="feature-center">
-										<span class="icon">
-											<i class="icon-users"></i>
-										</span>
+		<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="display-t">
+						<div class="display-tc">
+							<div class="col-md-3 col-sm-6 animate-box">
+								<div class="feature-center">
+									<span class="icon">
+										<i class="icon-users"></i>
+									</span>
 
-										<span class="counter js-counter" data-from="0" data-to="500"
-											data-speed="5000" data-refresh-interval="50">1</span>
-										<span class="counter-label">Estimated Guest</span>
+									<span class="counter js-counter" data-from="0" data-to="500" data-speed="5000"
+										data-refresh-interval="50">1</span>
+									<span class="counter-label">Estimated Guest</span>
 
-									</div>
 								</div>
-								<div class="col-md-3 col-sm-6 animate-box">
-									<div class="feature-center">
-										<span class="icon">
-											<i class="icon-user"></i>
-										</span>
+							</div>
+							<div class="col-md-3 col-sm-6 animate-box">
+								<div class="feature-center">
+									<span class="icon">
+										<i class="icon-user"></i>
+									</span>
 
-										<span class="counter js-counter" data-from="0" data-to="1000"
-											data-speed="5000" data-refresh-interval="50">1</span>
-										<span class="counter-label">We Catter</span>
-									</div>
+									<span class="counter js-counter" data-from="0" data-to="1000" data-speed="5000"
+										data-refresh-interval="50">1</span>
+									<span class="counter-label">We Catter</span>
 								</div>
-								<div class="col-md-3 col-sm-6 animate-box">
-									<div class="feature-center">
-										<span class="icon">
-											<i class="icon-calendar"></i>
-										</span>
-										<span class="counter js-counter" data-from="0" data-to="402"
-											data-speed="5000" data-refresh-interval="50">1</span>
-										<span class="counter-label">Events Done</span>
-									</div>
+							</div>
+							<div class="col-md-3 col-sm-6 animate-box">
+								<div class="feature-center">
+									<span class="icon">
+										<i class="icon-calendar"></i>
+									</span>
+									<span class="counter js-counter" data-from="0" data-to="402" data-speed="5000"
+										data-refresh-interval="50">1</span>
+									<span class="counter-label">Events Done</span>
 								</div>
-								<div class="col-md-3 col-sm-6 animate-box">
-									<div class="feature-center">
-										<span class="icon">
-											<i class="icon-clock"></i>
-										</span>
+							</div>
+							<div class="col-md-3 col-sm-6 animate-box">
+								<div class="feature-center">
+									<span class="icon">
+										<i class="icon-clock"></i>
+									</span>
 
-										<span class="counter js-counter" data-from="0" data-to="2345"
-											data-speed="5000" data-refresh-interval="50">1</span>
-										<span class="counter-label">Hours Spent</span>
+									<span class="counter js-counter" data-from="0" data-to="2345" data-speed="5000"
+										data-refresh-interval="50">1</span>
+									<span class="counter-label">Hours Spent</span>
 
-									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<!-- <div id="fh5co-testimonial">
+		<!-- <div id="fh5co-testimonial">
 				<div class="container">
 					<div class="row">
 						<div class="row animate-box">
@@ -431,7 +456,7 @@
 				</div>
 			</div> -->
 
-			<!-- <div id="fh5co-services" class="fh5co-section-gray">
+		<!-- <div id="fh5co-services" class="fh5co-section-gray">
 				<div class="container">
 
 					<div class="row animate-box">
@@ -492,7 +517,7 @@
 				</div>
 			</div> -->
 
-			<!-- <div id="fh5co-started" class="fh5co-bg"
+		<!-- <div id="fh5co-started" class="fh5co-bg"
 				style="background-image:url(images/img_bg_4.jpg);">
 				<div class="overlay"></div>
 				<div class="container">
@@ -527,7 +552,7 @@
 				</div>
 			</div> -->
 
-			<!-- <footer id="fh5co-footer" role="contentinfo">
+		<!-- <footer id="fh5co-footer" role="contentinfo">
 				<div class="container">
 
 					<div class="row copyright">
@@ -551,76 +576,77 @@
 
 				</div>
 			</footer> -->
-			
-		</div>
 
-		<div class="gototop js-top">
-			<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-		</div>
+	</div>
 
-		<!-- jQuery -->
-		<script src="js/jquery.min.js"></script>
-		<!-- jQuery Easing -->
-		<script src="js/jquery.easing.1.3.js"></script>
-		<!-- Bootstrap -->
-		<script src="js/bootstrap.min.js"></script>
-		<!-- Waypoints -->
-		<script src="js/jquery.waypoints.min.js"></script>
-		<!-- Carousel -->
-		<script src="js/owl.carousel.min.js"></script>
-		<!-- countTo -->
-		<script src="js/jquery.countTo.js"></script>
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
 
-		<!-- Stellar -->
-		<script src="js/jquery.stellar.min.js"></script>
-		<!-- Magnific Popup -->
-		<script src="js/jquery.magnific-popup.min.js"></script>
-		<script src="js/magnific-popup-options.js"></script>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
 
-		<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
-		<script src="js/simplyCountdown.js"></script>
-		<!-- Main -->
-		<script src="js/main.js"></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
 
-		<script>
-    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
+	<script src="js/simplyCountdown.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
 
-    // default example
-    simplyCountdown('.simply-countdown-one', {
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate()
-    });
+	<script>
+		var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
 
-    //jQuery example
-    $('#simply-countdown-losange').simplyCountdown({
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate(),
-        enableUtc: false
-    });
-	function scrollToTarget(type) {
-		var defaultId = "page";
-		switch(type) {
-			case 'page':
-			  break;
-			case 'fh5co-couple':
-			  defaultId = 'fh5co-couple';
-			  break;
-			case 'fh5co-event':
-				defaultId = 'fh5co-event';
-				break;
-				
-			case 'fh5co-gallery':
-				defaultId = 'fh5co-gallery';
-				break;
-			default:
-			  // code block
-		  }
-		var element = document.getElementById(defaultId);
-		element.scrollIntoView({behavior: "smooth"});
-	  }
-</script>
+		// default example
+		simplyCountdown('.simply-countdown-one', {
+			year: d.getFullYear(),
+			month: d.getMonth() + 1,
+			day: d.getDate()
+		});
 
-	</body>
+		//jQuery example
+		$('#simply-countdown-losange').simplyCountdown({
+			year: d.getFullYear(),
+			month: d.getMonth() + 1,
+			day: d.getDate(),
+			enableUtc: false
+		});
+		function scrollToTarget(type) {
+			var defaultId = "page";
+			switch (type) {
+				case 'page':
+					break;
+				case 'fh5co-couple':
+					defaultId = 'fh5co-couple';
+					break;
+				case 'fh5co-event':
+					defaultId = 'fh5co-event';
+					break;
+
+				case 'fh5co-gallery':
+					defaultId = 'fh5co-gallery';
+					break;
+				default:
+				// code block
+			}
+			var element = document.getElementById(defaultId);
+			element.scrollIntoView({ behavior: "smooth" });
+		}
+	</script>
+
+</body>
+
 </html>
