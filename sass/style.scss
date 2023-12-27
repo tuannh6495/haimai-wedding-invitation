@@ -383,14 +383,14 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 .fh5co-cover {
-	height: 900px;
+height: 900px;
 	background-size: cover;
 	// background-position: center center;
 	background-repeat: no-repeat;
 	position: relative;
 	width: 100%;
 	.overlay {
-		z-index:0;
+				z-index:0;
 		position: absolute;
 		bottom: 0;
 		top: 0;
@@ -964,8 +964,7 @@ form {
     margin: 0 4px;
     @include border-radius(50%);
     position: relative;
-
-    animation: pulse 1s ease infinite, 
+    animation: pulse 1s ease infinite
 }
 
 @keyframes pulse {
