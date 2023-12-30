@@ -578,7 +578,7 @@
 						<p>
 						<ul class="fh5co-social-icons">
 							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="https://www.facebook.com/tuan.nguyenhuy.397/"><i class="icon-facebook"></i></a></li>
 							<li><a href="#"><i class="icon-linkedin"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
 						</ul>
@@ -637,6 +637,12 @@
 			enableUtc: false
 		});
 		function scrollToTarget(type) {
+			if ( $('body').hasClass('offcanvas') ) {
+
+    			$('body').removeClass('offcanvas');
+    			$('.js-fh5co-nav-toggle').removeClass('active');
+				
+	    	}
 			var defaultId = "page";
 			switch (type) {
 				case 'page':
