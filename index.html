@@ -124,8 +124,7 @@
 								<a href="#" onclick="scrollToTarget('fh5co-gallery')" class="hover-overlay">Ảnh</a>
 							</li>
 							<li class="active">
-								<a href="#" onclick="scrollToTarget()" class="hover-overlay">Lời
-									chúc</a>
+								<a href="#" onclick="goToSubmit()" class="hover-overlay">Tham dự</a>
 							</li>
 						</ul>
 					</div>
@@ -146,7 +145,7 @@
 								<div class="simply-countdown simply-countdown-one"
 									style="z-index: 0; padding-top: 5px;"></div>
 								<p>
-									<a href="attending.html" class="btn btn-default btn-sm">Xác nhận tham
+									<a onclick="goToSubmit()" class="btn btn-default btn-sm">Xác nhận tham
 										dự</a>
 								</p>
 							</div>
@@ -161,9 +160,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-						<h2 style="font-family: 'Dancing Script'">Tuấn Ngân xin chào!</h2>
-						<h3>January 14th, 2024 Bac Ninh</h3>
-						<p>Xin chân trọng kính mời</p>
+						<h2 style="font-family: 'Dancing Script'">Giới thiệu cô dâu chú rể</h2>
+						<!-- <h3>January 14th, 2024 Bac Ninh</h3>
+						<p>Xin chân trọng kính mời</p> -->
 					</div>
 				</div>
 				<div class="couple-wrap animate-box img-responsive">
@@ -173,7 +172,7 @@
 						</div>
 						<div class="desc-groom">
 							<h3 style="font-family: 'Pacifico'">Huy Tuấn</h3>
-							<p>C2H5OH dễ cháy còn vợ anh thì dễ thương!!!</p>
+							<p></p>
 						</div>
 					</div>
 					<p class="heart text-center"><i class="icon-heart2"></i></p>
@@ -183,7 +182,7 @@
 						</div>
 						<div class="desc-bride">
 							<h3 style="font-family: 'Pacifico'">Thu Ngân</h3>
-							<p>Thanh niên Ngân hay dỗi</p>
+							<p>Như một cô Tấm bước ra từ chuyện cổ tích, chịu thương chịu khó. Với một trái tim nhân hậu và giàu lòng trắc ẩn. Cô dâu Ngân ngố rất thân thiện và thường giúp đỡ mọi người xung quanh </p>
 						</div>
 					</div>
 				</div>
@@ -357,6 +356,41 @@
 			</div>
 		</div>
 		<!-- end -->
+
+		<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>Are You Attending?</h2>
+						<p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
+					</div>
+				</div>
+				<div class="row animate-box">
+					<div class="col-md-10 col-md-offset-1">
+						<form class="form-inline" method="post"
+							action="https://script.google.com/macros/s/AKfycbwEufbyk4P5rs8o4nVr5N0U0cg0mTm9YEhMYboFGdZ__04XQfHKY9Z1jTby5714_r5U/exec?gid=0">
+							<div class="col-md-4 col-sm-4">
+								<div class="form-group">
+									<label for="name" class="sr-only">Name</label>
+									<input class="form-control" id="name" placeholder="Name" name="data[name]">
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-4">
+								<div class="form-group">
+									<label for="email" class="sr-only">Email</label>
+									<input type="email" class="form-control" id="email" placeholder="Email"
+										name="data[email]">
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-4">
+								<button type="submit" class="btn btn-default btn-block">I am Attending</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
 			<div class="overlay"></div>
@@ -577,9 +611,10 @@
 						</p>
 						<p>
 						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="https://www.facebook.com/tuan.nguyenhuy.397/"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="https://twitter.com/tuana2k38"><i class="icon-twitter"></i></a></li>
+							<li><a href="https://www.facebook.com/tuan.nguyenhuy.397/"><i class="icon-facebook"></i></a>
+							</li>
+							<li><a href="836959"><i class="icon-linkedin"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
 						</ul>
 						</p>
@@ -637,12 +672,12 @@
 			enableUtc: false
 		});
 		function scrollToTarget(type) {
-			if ( $('body').hasClass('offcanvas') ) {
+			if ($('body').hasClass('offcanvas')) {
 
-    			$('body').removeClass('offcanvas');
-    			$('.js-fh5co-nav-toggle').removeClass('active');
-				
-	    	}
+				$('body').removeClass('offcanvas');
+				$('.js-fh5co-nav-toggle').removeClass('active');
+
+			}
 			var defaultId = "page";
 			switch (type) {
 				case 'page':
@@ -661,6 +696,10 @@
 				// code block
 			}
 			var element = document.getElementById(defaultId);
+			element.scrollIntoView({ behavior: "smooth" });
+		}
+		function goToSubmit() {
+			var element = document.getElementById('fh5co-started');
 			element.scrollIntoView({ behavior: "smooth" });
 		}
 	</script>
