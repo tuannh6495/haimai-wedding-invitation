@@ -412,7 +412,6 @@ figure {
 
 #fh5co-counter,
 #fh5co-event {
-  height: 850px;
   float: left;
 }
 
@@ -959,7 +958,7 @@ form label {
 #fh5co-counter .display-tc h1,
 .fh5co-cover .display-tc h1 {
   margin-bottom: 0px;
-  font-size: 100px;
+  font-size: 76px;
   line-height: 1.5;
   font-family: "Sacramento", Arial, serif;
 }
@@ -1073,8 +1072,8 @@ form label {
   /* coutndown blocks */
   display: inline-block;
   opacity: 0.5;
-  width: 90px;
-  height: 90px;
+  width: 8rem;
+  height: 8rem;
   background: rgba(241, 78, 149, 0.8);
   margin: 0 4px;
   -webkit-border-radius: 50%;
@@ -1103,8 +1102,8 @@ form label {
   /* countdown block inner div */
   display: table-cell;
   vertical-align: middle;
-  height: 100px;
-  width: 100px;
+  height: 8rem;
+  width: 8rem;
 }
 
 .simply-countdown>.simply-section .simply-amount,
@@ -1115,7 +1114,7 @@ form label {
 }
 
 .simply-countdown>.simply-section .simply-amount {
-  font-size: 30px;
+  font-size: 2.7rem;
   /* amounts */
 }
 
