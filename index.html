@@ -6,7 +6,7 @@
 <html class="no-js"> <!--<![endif]-->
 
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Huy Tuấn - Thu Ngân</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -91,12 +91,54 @@
 				background: rgba(0, 0, 0, 0.5);
 			}
 		}
-	</style>
 
+		#result-box {
+			text-align: center;
+			padding: 40px 0;
+			background: #00000066;
+			top: 0;
+        	left: 0;
+			width: 100%;
+        	height: 100%;
+			position: fixed;
+			display: none;
+			z-index: 9999;
+      	}
+
+        #result-box #success-box h1 {
+			color: #F14E95;
+			font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+			font-weight: 900;
+			font-size: 40px;
+			margin-bottom: 10px;
+        }
+
+        #result-box #success-box p {
+			color: #404F5E;
+			font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+			font-size:20px;
+			margin: 0;
+        }
+
+		#result-box #success-box i {
+			color: #F14E95;
+			font-size: 100px;
+			line-height: 200px;
+			margin-left:-15px;
+      	}
+
+      	#success-box {
+			background: white;
+			padding: 60px;
+			border-radius: 4px;
+			box-shadow: 0 2px 3px #C8D0D8;
+			display: inline-block;
+			margin: 0 auto;
+      	}
+	</style>
 </head>
 
 <body>
-
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
@@ -508,6 +550,15 @@
 			</div>
 		</div>
 		<!-- end -->
+		<div id="result-box">
+			<div id="success-box">
+				<div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+					<i class="checkmark">✓</i>
+				</div>
+				<h1>Thành công</h1> 
+				<p id="countdown"></p>
+			</div>
+		</div>
 
 		<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
 			<div class="overlay"></div>
@@ -521,22 +572,24 @@
 				<div class="row animate-box">
 					<div class="col-md-10 col-md-offset-1">
 						<form class="form-inline" method="post"
-							action="https://script.google.com/macros/s/AKfycbwEufbyk4P5rs8o4nVr5N0U0cg0mTm9YEhMYboFGdZ__04XQfHKY9Z1jTby5714_r5U/exec?gid=0">
+							action="https://script.google.com/macros/s/AKfycbwEufbyk4P5rs8o4nVr5N0U0cg0mTm9YEhMYboFGdZ__04XQfHKY9Z1jTby5714_r5U/exec?gid=0" id="attendingForm"
+							onsubmit="event.preventDefault(); submitAttendence();"
+							>
 							<div class="col-md-4 col-sm-4">
 								<div class="form-group">
 									<label for="name" class="sr-only">Name</label>
-									<input class="form-control" id="name" placeholder="Name" name="data[name]">
+									<input class="form-control" id="name" placeholder="Name" name="data[name]" required>
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4">
 								<div class="form-group">
 									<label for="email" class="sr-only">Email</label>
 									<input type="email" class="form-control" id="email" placeholder="Email"
-										name="data[email]">
+										name="data[email]" required>
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4">
-								<button type="submit" class="btn btn-default btn-block">I am Attending</button>
+								<button class="btn btn-default btn-block" type="submit">I am Attending</button>
 							</div>
 						</form>
 					</div>
@@ -559,7 +612,6 @@
 									<span class="counter js-counter" data-from="0" data-to="500" data-speed="5000"
 										data-refresh-interval="50">1</span>
 									<span class="counter-label">Estimated Guest</span>
-
 								</div>
 							</div>
 							<div class="col-md-3 col-sm-6 animate-box">
@@ -805,6 +857,45 @@
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+	<script>
+		function submitAttendence() {
+			// Giả định rằng bạn đã thực hiện việc gửi form đi và nhận được kết quả JSON trả về như sau:
+			var responseJSON = '{"status":"success","message":"Data logged successfully"}';
+			var response = JSON.parse(responseJSON);
+			
+			if (response.status === "success") {
+				countdown();
+				document.getElementById("result-box").style.display = "block";
+				
+				setTimeout(function() {
+            		document.getElementById("result-box").style.display = 'none';
+        		}, 5000);
+				// Xử lý các hành động khác sau khi submit thành công
+			} else {
+				alert("Submit thất bại, vui lòng thử lại!");
+				// Xử lý các hành động khác khi submit thất bại (nếu cần)
+			}
+		}
+
+		function countdown() {
+			var count = 4; // Số giây bạn muốn đếm ngược
+			var countdownDisplay = document.getElementById('countdown');
+			countdownDisplay.innerHTML = 'Cảm ơn bạn đã phản hồi <3, thông báo sẽ tự dộng đóng sau ' + (count + 1) + ' giây';
+
+			var countdownTimer = setInterval(function() {
+				countdownDisplay.innerHTML = 'Cảm ơn bạn đã phản hồi <3, thông báo sẽ tự dộng đóng sau ' + count + ' giây';
+
+				count--;
+
+				if (count < 0) {
+					clearInterval(countdownTimer);
+					countdownDisplay.innerHTML = '';
+				}
+			}, 1000); // Cập nhật đếm ngược mỗi giây (1000ms)
+    	}
+	</script>
+
 
 	<script>
 		var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
