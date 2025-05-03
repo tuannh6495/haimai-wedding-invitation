@@ -1220,14 +1220,12 @@ form label {
   -ms-border-radius: 50%;
   border-radius: 50%;
   width: 150px;
-  height: 150px;
   object-fit: cover;
 }
 
 .couple-half .groom img,
 .couple-half .bride img {
   width: 150px;
-  height: 150px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -2131,7 +2129,7 @@ form label {
 }
 
 #fh5co-header {
-  background-image: url(images/img_bg_2.jpg);
+  background-image: url(https://i.ibb.co/PGSyx7Dw/img-bg-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
