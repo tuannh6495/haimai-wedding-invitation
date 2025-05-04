@@ -131,14 +131,59 @@
 			background: white;
 			padding: 60px;
 			border-radius: 4px;
-			box-shadow: 0 2px 3px #C8D0D8;
+			box-shadow: 0 2px 3px #c3dcf5;
 			display: inline-block;
 			margin: 0 auto;
       	}
 	</style>
+
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+	<style>
+	  #music-toggle {
+		position: fixed;
+		bottom: 20px;
+		left: 20px;
+		z-index: 9999;
+		font-size: 4rem;
+		cursor: pointer;
+		color: #f0f0f1;
+	  }
+	</style>
 </head>
 
 <body>
+
+	<i id="music-toggle" class="fas fa-pause"></i>
+
+	<audio id="my-audio" loop>
+	  <source src="/music/ido.mp3" type="audio/mpeg">
+	</audio>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	  $(function() {
+		const audio = $('#my-audio')[0];
+		let playing = true;
+	
+		// Phát nhạc tự động khi load trang
+		audio.play().catch(function(error) {
+		  console.log('Trình duyệt chặn tự động phát: ' + error);
+		});
+	
+		$('#music-toggle').click(function() {
+		  if (playing) {
+			audio.pause();
+			$(this).removeClass('fa-pause').addClass('fa-music');
+		  } else {
+			audio.play();
+			$(this).removeClass('fa-music').addClass('fa-pause');
+		  }
+		  playing = !playing;
+		});
+	  });
+	</script>
+
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
