@@ -148,21 +148,10 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 			rel="stylesheet">
 		<style>
-	  #music-toggle {
-		position: fixed;
-		bottom: 20px;
-		left: 20px;
-		z-index: 9999;
-		font-size: 4rem;
-		cursor: pointer;
-		color: #f0f0f1;
-	  }
 	</style>
 	</head>
 
 	<body>
-
-		<i id="music-toggle" class="fas fa-music"></i>
 
 		<audio id="my-audio" loop>
 			<source src="/music/ido.mp3" type="audio/mpeg">
@@ -179,18 +168,6 @@
 					playing = true;
 				}).catch(function(error) {
 					console.log('Trình duyệt chặn tự động phát: ' + error);
-				});
-			
-				// Bật/tắt nhạc khi nhấn nút
-				$('#music-toggle').click(function() {
-					if (playing) {
-						audio.pause();
-						$(this).removeClass('fa-pause').addClass('fa-music');
-					} else {
-						audio.play();
-						$(this).removeClass('fa-music').addClass('fa-pause');
-					}
-					playing = !playing;
 				});
 			
 				// Phát nhạc khi người dùng chạm hoặc vuốt bất kỳ đâu trên màn hình
