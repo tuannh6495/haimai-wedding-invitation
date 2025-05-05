@@ -162,7 +162,7 @@
 
 	<body>
 
-		<i id="music-toggle" class="fas fa-pause"></i>
+		<i id="music-toggle" class="fas fa-music"></i>
 
 		<audio id="my-audio" loop>
 			<source src="/music/ido.mp3" type="audio/mpeg">
@@ -170,27 +170,42 @@
 
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script>
-	  $(function() {
-		const audio = $('#my-audio')[0];
-		let playing = true;
-	
-		// Phát nhạc tự động khi load trang
-		audio.play().catch(function(error) {
-		  console.log('Trình duyệt chặn tự động phát: ' + error);
-		});
-	
-		$('#music-toggle').click(function() {
-		  if (playing) {
-			audio.pause();
-			$(this).removeClass('fa-pause').addClass('fa-music');
-		  } else {
-			audio.play();
-			$(this).removeClass('fa-music').addClass('fa-pause');
-		  }
-		  playing = !playing;
-		});
-	  });
-	</script>
+			$(function() {
+				const audio = $('#my-audio')[0];
+				let playing = false;
+			
+				// Phát nhạc tự động khi load trang (nếu không bị chặn)
+				audio.play().then(() => {
+					playing = true;
+				}).catch(function(error) {
+					console.log('Trình duyệt chặn tự động phát: ' + error);
+				});
+			
+				// Bật/tắt nhạc khi nhấn nút
+				$('#music-toggle').click(function() {
+					if (playing) {
+						audio.pause();
+						$(this).removeClass('fa-pause').addClass('fa-music');
+					} else {
+						audio.play();
+						$(this).removeClass('fa-music').addClass('fa-pause');
+					}
+					playing = !playing;
+				});
+			
+				// Phát nhạc khi người dùng chạm hoặc vuốt bất kỳ đâu trên màn hình
+				$(document).on('touchstart touchmove', function() {
+					if (!playing) {
+						audio.play().then(() => {
+							$('#music-toggle').removeClass('fa-music').addClass('fa-pause');
+							playing = true;
+						}).catch(function(error) {
+							console.log('Không thể phát nhạc khi chạm: ' + error);
+						});
+					}
+				});
+			});
+			</script>
 
 		<div class="fh5co-loader"></div>
 
